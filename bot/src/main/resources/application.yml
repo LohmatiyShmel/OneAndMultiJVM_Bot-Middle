@@ -1,0 +1,10 @@
+bot:
+    Name: ${TELEGRAM_BOT_NAME}
+    Token: ${TELEGRAM_BOT_TOKEN}
+spring:
+    application:
+        name: botShmel
+middleService:
+    url: http://localhost:8088
+server:
+    port: 8080

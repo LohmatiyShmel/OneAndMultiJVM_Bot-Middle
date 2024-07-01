@@ -1,0 +1,900 @@
+2024-07-01 15:52:55 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lohmatiyshmel.OneAndMulti.OneAndMultiApplicationTests]: OneAndMultiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-01 15:52:55 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication for test class com.lohmatiyshmel.OneAndMulti.OneAndMultiApplicationTests
+2024-07-01 15:52:56 [Test worker] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 11:15]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$0(InvalidConfigDataPropertyException.java:113)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:109)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2024-07-01 15:52:56 [Test worker] WARN  o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.lohmatiyshmel.OneAndMulti.OneAndMultiApplicationTests@4bafe935]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@23f72d88 testClass = com.lohmatiyshmel.OneAndMulti.OneAndMultiApplicationTests, locations = [], classes = [com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7876d598, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@72f46e16, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@32232e55, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2fab4aff, org.springframework.boot.test.context.SpringBootTestAnnotation@4cad7786], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 11:15]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$0(InvalidConfigDataPropertyException.java:113)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:109)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 87 common frames omitted
+2024-07-01 15:55:03 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 11:15]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$0(InvalidConfigDataPropertyException.java:113)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:109)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.main(OneAndMultiApplication.java:15)
+2024-07-01 15:55:41 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 11:15]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$0(InvalidConfigDataPropertyException.java:113)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:109)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.main(OneAndMultiApplication.java:15)
+2024-07-01 15:55:59 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 11:15]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$0(InvalidConfigDataPropertyException.java:113)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:109)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.main(OneAndMultiApplication.java:15)
+2024-07-01 15:56:11 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 11:15]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$0(InvalidConfigDataPropertyException.java:113)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:109)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.main(OneAndMultiApplication.java:15)
+2024-07-01 15:58:42 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 11:15]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$0(InvalidConfigDataPropertyException.java:113)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:109)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.main(OneAndMultiApplication.java:18)
+2024-07-01 16:03:51 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 21856 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:03:51 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:03:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-01 16:03:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-01 16:03:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:03:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:03:52 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:03:52 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms
+2024-07-01 16:03:52 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commandAnswerer' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\captor\CommandAnswerer.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commandMapContainer' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\commands\CommandMapContainer.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'balanceCommand' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\commands\BalanceCommand.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'accountService' defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class]: Unexpected exception during bean creation
+2024-07-01 16:03:52 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-01 16:03:52 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-01 16:03:52 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commandAnswerer' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\captor\CommandAnswerer.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commandMapContainer' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\commands\CommandMapContainer.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'balanceCommand' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\commands\BalanceCommand.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'accountService' defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.main(OneAndMultiApplication.java:18)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commandMapContainer' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\commands\CommandMapContainer.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'balanceCommand' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\commands\BalanceCommand.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'accountService' defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'balanceCommand' defined in file [C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\classes\java\main\com\gpbitfactory\bot\commands\BalanceCommand.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'accountService' defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1689)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeanCollection(DefaultListableBeanFactory.java:1543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1392)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accountService' defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 51 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'middleService.url' in value "${middleService.url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:953)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	... 60 common frames omitted
+2024-07-01 16:06:16 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 10980 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:06:16 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:06:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-01 16:06:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-01 16:06:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:06:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:06:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:06:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 918 ms
+2024-07-01 16:06:17 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: static java.lang.String com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.activeProfile
+2024-07-01 16:06:17 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:06:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-01 16:06:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-07-01 16:06:17 [main] INFO  c.l.O.OneAndMultiApplication - Started OneAndMultiApplication in 1.814 seconds (process running for 2.363)
+2024-07-01 16:06:17 [RMI TCP Connection(3)-192.168.0.183] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 16:06:17 [RMI TCP Connection(3)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 16:06:17 [RMI TCP Connection(3)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-07-01 16:28:41 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 17864 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:28:41 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:28:41 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication]
+2024-07-01 16:28:41 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.main(OneAndMultiApplication.java:19)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'accountService' for bean class [com.gpbitfactory.middle.service.AccountService] conflicts with existing, non-compatible bean definition of same name and class [com.gpbitfactory.bot.api.service.AccountService]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:306)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165)
+	... 13 common frames omitted
+2024-07-01 16:37:54 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 21300 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:37:54 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:37:54 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'clientHttpRequestFactory' defined in class path resource [com/gpbitfactory/middle/config/MiddleConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=middleConfig; factoryMethodName=clientHttpRequestFactory; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/gpbitfactory/middle/config/MiddleConfig.class]] for bean 'clientHttpRequestFactory' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=apiConfig; factoryMethodName=clientHttpRequestFactory; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class]] bound.
+2024-07-01 16:37:54 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-01 16:37:54 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'clientHttpRequestFactory', defined in class path resource [com/gpbitfactory/middle/config/MiddleConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-07-01 16:40:02 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 12488 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:40:02 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:40:02 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userService' defined in class path resource [com/gpbitfactory/middle/config/MiddleConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=middleConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/gpbitfactory/middle/config/MiddleConfig.class]] for bean 'userService' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=apiConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class]] bound.
+2024-07-01 16:40:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-01 16:40:02 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userService', defined in class path resource [com/gpbitfactory/middle/config/MiddleConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/gpbitfactory/bot/api/ApiConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-07-01 16:40:52 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 25732 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:40:52 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:40:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:40:53 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:40:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:40:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:40:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:40:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 974 ms
+2024-07-01 16:40:53 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: static java.lang.String com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.activeProfile
+2024-07-01 16:40:54 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –ê–ø–¥–µ–π—Ç –æ—Ç –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è LohmatiyShmel c —Å–æ–æ–±—â–µ–Ω–∏–µ–º:/help
+2024-07-01 16:40:54 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.commands.HelpCommand - –ò—Å–ø–æ–ª–Ω—è—é –∫–æ–º–∞–Ω–¥—É /help –¥–ª—è –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è: @LohmatiyShmel
+2024-07-01 16:40:54 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:40:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:40:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 16:40:54 [main] INFO  c.l.O.OneAndMultiApplication - Started OneAndMultiApplication in 2.436 seconds (process running for 2.935)
+2024-07-01 16:40:54 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –û—Ç–ø—Ä–∞–≤–∏–ª –æ—Ç–≤–µ—Ç –¥–ª—è 1847101075
+2024-07-01 16:40:54 [RMI TCP Connection(3)-192.168.0.183] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 16:40:54 [RMI TCP Connection(3)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 16:40:54 [RMI TCP Connection(3)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-07-01 16:41:01 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –ê–ø–¥–µ–π—Ç –æ—Ç –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è LohmatiyShmel c —Å–æ–æ–±—â–µ–Ω–∏–µ–º:/createaccount
+2024-07-01 16:41:01 [Shmeljonysh_bot Telegram Executor] INFO  c.g.b.commands.CreateAccountCommand - –ò—Å–ø–æ–ª–Ω—è—é –∫–æ–º–∞–Ω–¥—É /createaccount –¥–ª—è –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è: @LohmatiyShmel
+2024-07-01 16:41:01 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –û—Ç–ø—Ä–∞–≤–∏–ª –æ—Ç–≤–µ—Ç –¥–ª—è 1847101075
+2024-07-01 16:41:03 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –ê–ø–¥–µ–π—Ç –æ—Ç –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è LohmatiyShmel c —Å–æ–æ–±—â–µ–Ω–∏–µ–º:/ping
+2024-07-01 16:41:03 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.commands.PingCommand - –ò—Å–ø–æ–ª–Ω—è—é –∫–æ–º–∞–Ω–¥—É /ping –¥–ª—è –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è: @LohmatiyShmel
+2024-07-01 16:41:03 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –û—Ç–ø—Ä–∞–≤–∏–ª –æ—Ç–≤–µ—Ç –¥–ª—è 1847101075
+2024-07-01 16:42:04 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 26056 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:42:04 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:42:05 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:42:05 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:42:05 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:42:05 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:42:05 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:42:05 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 966 ms
+2024-07-01 16:42:05 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: static java.lang.String com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.activeProfile
+2024-07-01 16:42:06 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:42:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:42:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 16:42:06 [main] INFO  c.l.O.OneAndMultiApplication - Started OneAndMultiApplication in 2.337 seconds (process running for 2.853)
+2024-07-01 16:42:06 [RMI TCP Connection(2)-192.168.0.183] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 16:42:06 [RMI TCP Connection(2)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 16:42:06 [RMI TCP Connection(2)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-07-01 16:46:28 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 27392 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:46:28 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:46:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:46:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:46:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:46:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:46:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:46:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 968 ms
+2024-07-01 16:46:29 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: static java.lang.String com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.activeProfile
+2024-07-01 16:46:30 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:46:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:46:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 16:46:30 [main] INFO  c.l.O.OneAndMultiApplication - Started OneAndMultiApplication in 2.392 seconds (process running for 2.983)
+2024-07-01 16:46:30 [RMI TCP Connection(2)-192.168.0.183] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 16:46:30 [RMI TCP Connection(2)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 16:46:30 [RMI TCP Connection(2)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-07-01 16:47:03 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –ê–ø–¥–µ–π—Ç –æ—Ç –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è LohmatiyShmel c —Å–æ–æ–±—â–µ–Ω–∏–µ–º:/balance
+2024-07-01 16:47:03 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.commands.BalanceCommand - –ò—Å–ø–æ–ª–Ω—è—é –∫–æ–º–∞–Ω–¥—É /balance –¥–ª—è –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è: @LohmatiyShmel
+2024-07-01 16:47:03 [http-nio-8088-exec-1] INFO  c.g.m.controller.MiddleController - –ü–æ–ª—É—á–µ–Ω –∑–∞–ø—Ä–æ—Å –ø—Ä–æ—Å–º–æ—Ç—Ä–∞ —Å–ø–∏—Å–∫–∞ —Å—á–µ—Ç–æ–≤ –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è —Å id: 1847101075
+2024-07-01 16:47:03 [http-nio-8088-exec-1] ERROR c.g.m.controller.MiddleController - –ü—Ä–æ–∏–∑–æ—à–ª–∞ –Ω–µ–ø—Ä–µ–¥–≤–∏–¥–µ–Ω–Ω–∞—è –æ—à–∏–±–∫–∞!
+2024-07-01 16:47:04 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - –û—Ç–ø—Ä–∞–≤–∏–ª –æ—Ç–≤–µ—Ç –¥–ª—è 1847101075
+2024-07-01 16:48:29 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 8908 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:48:29 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:48:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:48:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:48:30 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:48:30 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:48:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:48:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 980 ms
+2024-07-01 16:48:30 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: static java.lang.String com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.activeProfile
+2024-07-01 16:48:31 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:48:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:48:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 16:48:31 [main] INFO  c.l.O.OneAndMultiApplication - Started OneAndMultiApplication in 2.365 seconds (process running for 2.878)
+2024-07-01 16:48:31 [RMI TCP Connection(1)-192.168.0.183] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 16:48:31 [RMI TCP Connection(1)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 16:48:31 [RMI TCP Connection(1)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-07-01 16:51:36 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 10820 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:51:36 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 16:51:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:51:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:51:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:51:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:51:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:51:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 954 ms
+2024-07-01 16:51:37 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: static java.lang.String com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.activeProfile
+2024-07-01 16:51:38 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:51:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:51:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 16:51:38 [main] INFO  c.l.O.OneAndMultiApplication - Started OneAndMultiApplication in 2.384 seconds (process running for 2.924)
+2024-07-01 16:51:38 [RMI TCP Connection(2)-192.168.0.183] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 16:51:38 [RMI TCP Connection(2)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 16:51:38 [RMI TCP Connection(2)-192.168.0.183] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-07-01 16:56:53 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 18876 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:56:53 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "service1"
+2024-07-01 16:56:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:56:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:56:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:56:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:56:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:56:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1231 ms
+2024-07-01 16:56:56 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:56:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:56:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 16:56:56 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 2.983 seconds (process running for 3.448)
+2024-07-01 16:58:22 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 19956 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:58:22 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 16:58:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:58:23 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:58:23 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:58:23 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:58:23 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:58:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1243 ms
+2024-07-01 16:58:24 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:58:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:58:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 16:58:24 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 3.113 seconds (process running for 3.531)
+2024-07-01 16:58:37 [main] INFO  c.g.middle.MiddleApplication - Starting MiddleApplication using Java 17.0.11 with PID 13048 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\middle\build\libs\middle-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 16:58:37 [main] INFO  c.g.middle.MiddleApplication - The following 1 profile is active: "middle"
+2024-07-01 16:58:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 16:58:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:58:38 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 16:58:38 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 16:58:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 16:58:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1275 ms
+2024-07-01 16:58:39 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 16:58:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 16:58:39 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-07-01 16:58:39 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-01 16:58:39 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8088 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8088 or configure this application to listen on another port.
+
+2024-07-01 17:02:21 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 20496 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:02:21 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 17:02:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:02:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:02:22 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:02:22 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:02:22 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:02:22 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1191 ms
+2024-07-01 17:02:23 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:02:23 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:02:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:02:24 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 2.952 seconds (process running for 3.381)
+2024-07-01 17:02:46 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - ¿Ô‰ÂÈÚ ÓÚ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ LohmatiyShmel c ÒÓÓ·˘ÂÌËÂÏ:/ping
+2024-07-01 17:02:46 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.commands.PingCommand - »ÒÔÓÎÌˇ˛ ÍÓÏ‡Ì‰Û /ping ‰Îˇ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ: @LohmatiyShmel
+2024-07-01 17:02:46 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - ŒÚÔ‡‚ËÎ ÓÚ‚ÂÚ ‰Îˇ 1847101075
+2024-07-01 17:02:47 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - ¿Ô‰ÂÈÚ ÓÚ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ LohmatiyShmel c ÒÓÓ·˘ÂÌËÂÏ:/balance
+2024-07-01 17:02:47 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.commands.BalanceCommand - »ÒÔÓÎÌˇ˛ ÍÓÏ‡Ì‰Û /balance ‰Îˇ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ: @LohmatiyShmel
+2024-07-01 17:02:47 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 17:02:47 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 17:02:47 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-07-01 17:02:47 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - ŒÚÔ‡‚ËÎ ÓÚ‚ÂÚ ‰Îˇ 1847101075
+2024-07-01 17:04:02 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 25972 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:04:02 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 17:04:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:04:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:04:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:04:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:04:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:04:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1244 ms
+2024-07-01 17:04:04 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:04:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:04:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:04:04 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 3.041 seconds (process running for 3.455)
+2024-07-01 17:07:37 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 28136 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:07:37 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 17:07:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:07:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:07:39 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:07:39 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:07:39 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:07:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1212 ms
+2024-07-01 17:07:40 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:07:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:07:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:07:40 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 2.947 seconds (process running for 3.356)
+2024-07-01 17:08:12 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 28092 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:08:12 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 17:08:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:08:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:08:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:08:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:08:14 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:08:14 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1337 ms
+2024-07-01 17:08:15 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:08:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:08:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:08:15 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 3.138 seconds (process running for 3.553)
+2024-07-01 17:08:27 [main] INFO  c.g.middle.MiddleApplication - Starting MiddleApplication using Java 17.0.11 with PID 14324 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\middle\build\libs\middle-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:08:27 [main] INFO  c.g.middle.MiddleApplication - The following 1 profile is active: "middle"
+2024-07-01 17:08:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:08:28 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:08:28 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:08:28 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:08:28 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:08:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1214 ms
+2024-07-01 17:08:29 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:08:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:08:29 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-07-01 17:08:29 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-01 17:08:29 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8088 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8088 or configure this application to listen on another port.
+
+2024-07-01 17:08:44 [main] INFO  c.g.middle.MiddleApplication - Starting MiddleApplication using Java 17.0.11 with PID 16128 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\middle\build\libs\middle-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:08:44 [main] INFO  c.g.middle.MiddleApplication - The following 1 profile is active: "middle"
+2024-07-01 17:08:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:08:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:08:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:08:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:08:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:08:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1287 ms
+2024-07-01 17:08:46 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:08:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:08:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:08:46 [main] INFO  c.g.middle.MiddleApplication - Started MiddleApplication in 2.707 seconds (process running for 3.171)
+2024-07-01 17:09:01 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 28432 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:09:01 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 17:09:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:09:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:09:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:09:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:09:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:09:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1292 ms
+2024-07-01 17:09:04 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:09:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:09:04 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-07-01 17:09:04 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-01 17:09:04 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8088 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8088 or configure this application to listen on another port.
+
+2024-07-01 17:13:08 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 21544 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:13:08 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 17:13:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:13:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:13:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:13:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:13:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:13:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1175 ms
+2024-07-01 17:13:11 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:13:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:13:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:13:11 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 2.881 seconds (process running for 3.35)
+2024-07-01 17:13:23 [main] INFO  c.g.middle.MiddleApplication - Starting MiddleApplication using Java 17.0.11 with PID 24732 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\middle\build\libs\middle-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:13:23 [main] INFO  c.g.middle.MiddleApplication - The following 1 profile is active: "middle"
+2024-07-01 17:13:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:13:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:13:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:13:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:13:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:13:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1316 ms
+2024-07-01 17:13:25 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:13:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:13:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:13:25 [main] INFO  c.g.middle.MiddleApplication - Started MiddleApplication in 2.753 seconds (process running for 3.174)
+2024-07-01 17:13:39 [main] INFO  c.g.bot.BotShmelApplication - Starting BotShmelApplication using Java 17.0.11 with PID 25012 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\bot\build\libs\bot-0.0.1-SNAPSHOT-plain.jar started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:13:39 [main] INFO  c.g.bot.BotShmelApplication - The following 1 profile is active: "bot"
+2024-07-01 17:13:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-01 17:13:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-01 17:13:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:13:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:13:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:13:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1189 ms
+2024-07-01 17:13:41 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:13:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-01 17:13:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-07-01 17:13:41 [main] INFO  c.g.bot.BotShmelApplication - Started BotShmelApplication in 2.933 seconds (process running for 3.353)
+2024-07-01 17:14:15 [main] INFO  c.l.O.OneAndMultiApplication - Starting OneAndMultiApplication using Java 17.0.11 with PID 15532 (C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle\build\classes\java\main started by Pirog in C:\Users\Pirog\Desktop\Projects\OneAndMultiJVM_Bot-Middle)
+2024-07-01 17:14:15 [main] INFO  c.l.O.OneAndMultiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-01 17:14:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2024-07-01 17:14:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:14:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-01 17:14:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-07-01 17:14:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-01 17:14:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 887 ms
+2024-07-01 17:14:16 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: static java.lang.String com.lohmatiyshmel.OneAndMulti.OneAndMultiApplication.activeProfile
+2024-07-01 17:14:17 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-01 17:14:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-07-01 17:14:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path ''
+2024-07-01 17:14:17 [main] INFO  c.l.O.OneAndMultiApplication - Started OneAndMultiApplication in 2.1 seconds (process running for 2.453)
+2024-07-01 17:14:26 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - ¿Ô‰ÂÈÚ ÓÚ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ LohmatiyShmel c ÒÓÓ·˘ÂÌËÂÏ:/balance
+2024-07-01 17:14:26 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.commands.BalanceCommand - »ÒÔÓÎÌˇ˛ ÍÓÏ‡Ì‰Û /balance ‰Îˇ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ: @LohmatiyShmel
+2024-07-01 17:14:26 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-01 17:14:26 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-01 17:14:26 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-07-01 17:14:26 [http-nio-8088-exec-1] INFO  c.g.m.controller.MiddleController - œÓÎÛ˜ÂÌ Á‡ÔÓÒ ÔÓÒÏÓÚ‡ ÒÔËÒÍ‡ Ò˜ÂÚÓ‚ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ Ò id: 1847101075
+2024-07-01 17:14:26 [http-nio-8088-exec-1] ERROR c.g.m.controller.MiddleController - œÓËÁÓ¯Î‡ ÌÂÔÂ‰‚Ë‰ÂÌÌ‡ˇ Ó¯Ë·Í‡!
+2024-07-01 17:14:26 [Shmeljonysh_bot Telegram Executor] INFO  c.g.bot.telegrambot.TelegramBot - ŒÚÔ‡‚ËÎ ÓÚ‚ÂÚ ‰Îˇ 1847101075

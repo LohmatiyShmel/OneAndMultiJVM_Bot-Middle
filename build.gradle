@@ -1,0 +1,89 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.lohmatiyshmel'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+subprojects {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.2.5'
+    implementation group: 'org.telegram', name: 'telegrambots', version: '6.9.7.1'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.3.1'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.12.0'
+    testImplementation 'org.wiremock:wiremock-standalone:3.6.0'
+    testImplementation "org.assertj:assertj-core:3.24.2"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0-M2'
+    testImplementation 'junit:junit:4.13.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation project(':bot')
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.3.1'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.12.0'
+    testImplementation 'org.wiremock:wiremock-standalone:3.6.0'
+    testImplementation 'ch.qos.logback:logback-classic:1.5.6'
+    implementation project(':middle')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.named('bootJar') {
+    enabled = true
+}
+
+tasks.named('jar') {
+    enabled = false
+}
+task runBotOnly(type: JavaExec) {
+    group = 'application'
+    description = 'Run Bot in a separate JVM'
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.gpbitfactory.bot.BotShmelApplication'
+    jvmArgs = ['-Dspring.profiles.active=bot']
+}
+task runMiddleOnly(type: JavaExec) {
+    group = 'application'
+    description = 'Run Middle in a separate JVM'
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.gpbitfactory.middle.MiddleApplication'
+    jvmArgs = ['-Dspring.profiles.active=middle']
+}

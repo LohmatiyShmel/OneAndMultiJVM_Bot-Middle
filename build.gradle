@@ -55,7 +55,6 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.12.0'
     testImplementation 'org.wiremock:wiremock-standalone:3.6.0'
-    testImplementation 'ch.qos.logback:logback-classic:1.5.6'
     implementation project(':middle')
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
